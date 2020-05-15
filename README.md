@@ -21,16 +21,16 @@ User:
 ```
 
 # Endpoints for user
-1. **POST(/users/login):** <br /> Allows user to send their email and password. If successful, an auth token is generated, stored and passed for further use of API.
-2. **POST(/users/logout):** <br /> Allows user to destroy token and logout.
-3. **POST(/users/logoutAll):** <br /> Allows user to logout from all devices.
-4. **POST(/users/me/avatar):** <br /> Allows user to upload profile pic to MongoDB
-5. **POST(/users):** <br /> Allows user to signup
-6. **PATCH(/users/me):** <br /> Allows user to update his credentials
-7. **GET(/users/me):** <br /> Allows user to get their profile data
-8. **GET(/users/{userid}/avatar):** <br /> Sends profile pic
-9. **DELETE(/users/me):** <br /> Delete Account
-10. **DELETE(/users/me/avatar):** <br /> Delete profile picture
+1. **POST /users/login:** <br /> Allows user to send their email and password. If successful, an auth token is generated, stored and passed for further use of API.
+1. **POST /users/logout:** <br /> Allows user to destroy token and logout.
+1. **POST /users/logoutAll:** <br /> Allows user to logout from all devices.
+1. **POST /users/me/avatar:** <br /> Allows user to upload profile pic to MongoDB
+1. **POST /users:** <br /> Allows user to signup
+1. **PATCH /users/me:** <br /> Allows user to update his credentials
+1. **GET /users/me:** <br /> Allows user to get their profile data
+1. **GET /users/{userid}/avatar:** <br /> Sends profile pic
+1. **DELETE /users/me:** <br /> Delete Account
+1. **DELETE /users/me/avatar:** <br /> Delete profile picture
 
 ```
 Tasks:
@@ -42,12 +42,12 @@ Tasks:
 
 Task endpoints can only be used after user logins or signup
 # Endpoints for task
-1. **GET(/tasks/{taskId}):** <br /> Sends a task corresponding to taskId
-2. **GET(/tasks):** <br />  Sends group of tasks
+1. **GET /tasks/{taskId}:** <br /> Sends a task corresponding to taskId
+1. **GET /tasks:** <br />  Sends group of tasks
    <br /> **Options:**
-   <br /> limit: Integer value for the no of tasks you want to get at a time
-   <br /> skip: Integer value for the no of tasks you want to skip fro the beginning.
-   <br /> sortBy: {completed, createdAt} :asc/:desc is added to string for getting data in ascending order/descending order
-3. **POST(/tasks):** <br /> Create a new task
-4. **PATCH(/tasks/{taskId}):** <br /> Update an existing task
-5. **DELETE(/tasks/{taskId}):** <br /> Delete a task
+   1. **limit:** Integer value for the no of tasks you want to get at a time
+   1. **skip:** Integer value for the no of tasks you want to skip fro the beginning.
+   1. **sortBy:** {completed, createdAt} :asc/:desc is added to string for getting data in ascending order/descending order
+1. **POST /tasks:** <br /> Create a new task
+1. **PATCH /tasks/{taskId}:** <br /> Update an existing task
+1. **DELETE /tasks/{taskId}:** <br /> Delete a task
